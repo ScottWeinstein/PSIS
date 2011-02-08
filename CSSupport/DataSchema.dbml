@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="" ContextNamespace="PSIS" Class="DataSchemaContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="INFORMATION_SCHEMA.VIEWS" Member="Views">
+    <Type Name="View">
+      <Column Name="TABLE_CATALOG" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="TABLE_SCHEMA" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="TABLE_NAME" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="CHECK_OPTION" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="IS_UPDATABLE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Association Name="View_Column" Member="Columns" Storage="_COLUMNs" ThisKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" OtherKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" Type="Column" />
+      <Association Name="Table_View" Member="Table" Storage="_TABLE" ThisKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" OtherKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" Type="Table" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="INFORMATION_SCHEMA.TABLES" Member="Tables">
+    <Type Name="Table">
+      <Column Name="TABLE_CATALOG" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="TABLE_SCHEMA" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="TABLE_NAME" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="TABLE_TYPE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Table_View" Member="VIEWs" ThisKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" OtherKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" Type="View" Cardinality="One" />
+      <Association Name="Table_Column" Member="Columns" Storage="_COLUMNs" ThisKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" OtherKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" Type="Column" />
+    </Type>
+  </Table>
+  <Table Name="INFORMATION_SCHEMA.COLUMNS" Member="Columns">
+    <Type Name="Column">
+      <Column Name="TABLE_CATALOG" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="TABLE_SCHEMA" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="TABLE_NAME" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="COLUMN_NAME" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="IS_NULLABLE" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="DATA_TYPE" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CHARACTER_MAXIMUM_LENGTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Table_Column" Member="Table" Storage="_TABLE" ThisKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" OtherKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" Type="Table" IsForeignKey="true" />
+      <Association Name="View_Column" Member="View" Storage="_VIEW" ThisKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" OtherKey="TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME" Type="View" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,12 @@
+USE [DemoDb]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TableScripts](
+	[FileId] [int] IDENTITY(1,1) NOT NULL,
+	[Filename] [nvarchar](255) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+) ON [PRIMARY]
+
+GO

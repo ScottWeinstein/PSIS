@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DeploymentDb" Class="DDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=DeploymentDb;Integrated Security=True" SettingsObjectName="DeploymentDBContext.Properties.Settings" SettingsPropertyName="DeploymentDbConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.HasScriptBeenRun" Method="HasScriptBeenRun" IsComposable="true">
+    <Parameter Name="fileName" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="HasScriptBeenRunResult">
+      <Column Name="val" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SaveScriptResults" Method="SaveScriptResults">
+    <Parameter Name="fileName" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="resultText" Type="System.String" DbType="VarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

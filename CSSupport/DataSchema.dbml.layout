@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataSchema">
+  <DataContextMoniker Name="/DataSchemaContext" />
+  <nestedChildShapes>
+    <classShape Id="6d1d0092-21f0-4c78-aef7-cc47c22e161e" absoluteBounds="3.5, 2.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataSchemaContext/View" />
+      <nestedChildShapes>
+        <elementListCompartment Id="395f1b61-bf1a-4b5e-8b05-57d497efc583" absoluteBounds="3.515, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00f9373f-daa3-47ed-8583-79765354ad8d" absoluteBounds="0.75, 2.875, 2, 1.5785953776041661">
+      <DataClassMoniker Name="/DataSchemaContext/Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb24d284-4119-417b-a398-54c4b65a8b64" absoluteBounds="0.765, 3.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ebb747f1-eabb-4216-8822-2ada47e4b725" absoluteBounds="6.25, 1.125, 3.625, 2.1554996744791666">
+      <DataClassMoniker Name="/DataSchemaContext/Column" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55b22fe9-df59-4acc-a292-c25a8171f099" absoluteBounds="6.265, 1.585, 3.5949999999999998, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.66429768880208); (3.5 : 3.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataSchemaContext/Table/Table_View" />
+      <nodes>
+        <classShapeMoniker Id="00f9373f-daa3-47ed-8583-79765354ad8d" />
+        <classShapeMoniker Id="6d1d0092-21f0-4c78-aef7-cc47c22e161e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 2.875); (1.75 : 1.9999995); (6.25 : 1.9999995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataSchemaContext/Table/Table_Column" />
+      <nodes>
+        <classShapeMoniker Id="00f9373f-daa3-47ed-8583-79765354ad8d" />
+        <classShapeMoniker Id="ebb747f1-eabb-4216-8822-2ada47e4b725" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.07774983723958); (6.25 : 3.07774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataSchemaContext/View/View_Column" />
+      <nodes>
+        <classShapeMoniker Id="6d1d0092-21f0-4c78-aef7-cc47c22e161e" />
+        <classShapeMoniker Id="ebb747f1-eabb-4216-8822-2ada47e4b725" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

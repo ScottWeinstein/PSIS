@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0">
+  <Operation Name="Rename Refactor" Key="3e9ddea8-8c8e-4fb2-8634-e747cf624234" ChangeDateTime="04/17/2010 04:23:37">
+    <Property Name="ElementName" Value="[DW].[Table1].[col4]" />
+    <Property Name="ElementType" Value="ISql100SimpleColumn" />
+    <Property Name="ParentElementName" Value="[DW].[Table1]" />
+    <Property Name="ParentElementType" Value="ISql100Table" />
+    <Property Name="NewName" Value="col5" />
+  </Operation>
+</Operations>
