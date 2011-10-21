@@ -43,7 +43,7 @@ $dt.Add("SQLClient", $srccs, 		$destcs, "select * from dbo.TradersToDesksMap", "
 $dt.Add("SQLClient", $srccs, 		$destcs, "select * from dbo.Accounts", 	"staging.Accounts")
 $dt.Add("SQLClient", $srccs, 		$destcs, "select * from dbo.Desks", 	"staging.Desks")
 
-$res = $dt.Run($null)
+$res = $dt.Run($null) # the 5 above data trasfers will run in parallel
 $res | Out-String
 $res | ? { $_.Error } | % {$_.Error} | Out-String
 
