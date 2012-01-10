@@ -11,7 +11,7 @@ And have sane deployments as a side-effect
 #Why version control?
 
 #Version Control
-* VCS is “the database of record for your code”
+* VCS is **the database of record for your code**
 * Allows non-locking concurrency between developers
 * Freedom to explore
 * Out of band documentation on changes in code
@@ -30,14 +30,15 @@ And have sane deployments as a side-effect
 
 #TSQL is broken
 * C# code as TSQL language designers would have it
-	```C#
+
+```C#
 	update class ASillyExample {
 	 create public string AUDF(int arg1)
 	 {
 	 }
 	 drop public void AFunctionNoLongerUsed();
 	}
-	````
+```
 
 # Managing schema changes is hard
 * For instance, replacing AssetType (varchar) with AssetTypeId (int, FK)
@@ -64,7 +65,7 @@ And have sane deployments as a side-effect
 * Code
 	* Each entity gets one file
 	* Consistent syntax to drop and create
-	* A dbcompile tool deletes any entity that isn’t in the file system
+	* A dbcompile tool deletes any entity that isn't in the file system
 	* A Db2Src tool helps get you started
 	* Same tool is used to build the database locally and to deploy to production
 
@@ -92,4 +93,4 @@ And have sane deployments as a side-effect
 # Potential pitfalls
 * Allowing one-off changes to exist outside the VCS system
 * Indulging team members who need to use their own special way
-* Other tools can be used, provided there’s a common text based gold representation
+* Other tools can be used, provided there's a common text based gold representation
