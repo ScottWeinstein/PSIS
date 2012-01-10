@@ -1,8 +1,3 @@
-author: @ScottWeinstein
-title: Getting your database under version control
-footer: @ScottWeinstein
-subfooter: Lab49
-
 #Getting your database under version control
 And have sane deployments as a side-effect
 
@@ -79,8 +74,8 @@ And have sane deployments as a side-effect
 
 # Deployment
 * The goal of deployment is to get the Prod database from current state to the new features state.
-* Include source and deploy-database.ps1 with deployment package
-* Run the deploy-database.ps1
+* Include source and `deploy-database.ps1` with deployment package
+* Run the `deploy-database.ps1`
 * After a release, move exiting items in TableScripts to an archive dir
 
 # Continuous integration
